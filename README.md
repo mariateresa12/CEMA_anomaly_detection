@@ -41,20 +41,6 @@ The experiments in this repository are based on the **Zigbee dataset** published
 
 The dataset contains Zigbee traffic captures that can be used for security analysis and anomaly detection experiments. In this repository, the data has been preprocessed into JSON format using the `zigbee_dataset_preprocess.py` script.
 
-## Methods
-
-### Random Forest
-
-The Random Forest approach follows a supervised learning strategy. It uses labeled data to train a binary classifier capable of distinguishing between normal and anomalous samples.
-
-This method relies on statistical and network-related features extracted during preprocessing. It provides a baseline Machine Learning approach for anomaly detection in Zigbee-based CEMA time-series data.
-
-### LSTM Autoencoder
-
-The LSTM Autoencoder follows an unsupervised anomaly detection strategy. It is trained to reconstruct normal temporal sequences and identifies anomalies by measuring the reconstruction error.
-
-Samples with reconstruction errors above a defined threshold are considered anomalous. This approach is suitable for detecting abnormal temporal patterns without requiring labeled attack samples during training.
-
 ## Data Preprocessing
 
 The original dataset is provided as PCAP captures. The preprocessing pipeline implemented in `zigbee_dataset_preprocess.py` converts these captures into structured JSON files.
